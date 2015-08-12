@@ -18,7 +18,7 @@ QueryBuilder.define('bt-selectpicker', function(options) {
         rule.$el.find('.rule-operator-container select').removeClass('form-control').selectpicker(options);
     });
 
-    this.on('afterCreateRuleOperators', function(e, rule) {
+    this.on('afterCreateRuleInput', function(e, rule) {
         rule.$el.find('.rule-value-container select').removeClass('form-control').selectpicker(options);
     });
 
@@ -31,7 +31,7 @@ QueryBuilder.define('bt-selectpicker', function(options) {
         rule.$el.find('.rule-operator-container select').selectpicker('render');
     });
 
-     this.on('afterUpdateRuleOperator', function(e, rule) {
+     this.on('afterUpdateRuleValue', function(e, rule) {
         rule.$el.find('.rule-value-container select').selectpicker('render');
     });
 }, {
